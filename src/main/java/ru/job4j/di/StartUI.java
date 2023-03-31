@@ -1,11 +1,18 @@
 package ru.job4j.di;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class StartUI {
 
     private Store store;
 
-    public StartUI(Store store) {
+    private ConsoleInput consoleInput;
+
+    public StartUI(Store store, ConsoleInput consoleInput) {
         this.store = store;
+        this.consoleInput = consoleInput;
     }
 
     public void add(String value) {
@@ -16,5 +23,9 @@ public class StartUI {
         for (String value : store.getAll()) {
             System.out.println(value);
         }
+    }
+
+    public void print(String question) {
+        consoleInput.askStr(question);
     }
 }

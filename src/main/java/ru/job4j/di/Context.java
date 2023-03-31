@@ -14,6 +14,7 @@ public class Context {
         if (constructors.length > 1) {
             throw new IllegalStateException("Class has multiple constructors : " + cl.getCanonicalName());
         }
+
         Constructor con = constructors[0];
         List<Object> args = new ArrayList<Object>();
         for (Class arg : con.getParameterTypes()) {
