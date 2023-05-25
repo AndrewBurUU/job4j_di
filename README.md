@@ -19,4 +19,4 @@
 - титульная страница: скрин1
 
 # Контакты
-mymail@gmail.com.
+andrew76k@rambler.ru
